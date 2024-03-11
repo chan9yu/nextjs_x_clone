@@ -1,6 +1,15 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import styles from './layout.module.css';
 
-export default function BeforeLoginLayout({ children }: PropsWithChildren) {
-	return <div className={styles.container}>{children}</div>;
+type BeforeLoginLayoutProps = PropsWithChildren<{
+	modal?: ReactNode;
+}>;
+
+export default function BeforeLoginLayout({ children, modal }: BeforeLoginLayoutProps) {
+	return (
+		<div className={styles.container}>
+			{children}
+			{modal}
+		</div>
+	);
 }
