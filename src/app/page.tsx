@@ -1,3 +1,5 @@
-export default function HomePage() {
-	return <div>HomePage</div>;
+import Main from '../components/beforeLogin/Main';
+
+export default function BeforeLoginPage() {
+	return <Main />;
 }
